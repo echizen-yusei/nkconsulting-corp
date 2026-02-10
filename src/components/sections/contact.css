@@ -1,0 +1,34 @@
+.contact-section{
+    background: #E6E6E6;
+    z-index: 2;
+    position: relative;
+    padding: 120px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.contact-text{
+    color: #262626;
+    width: 40%;
+    position: sticky;
+    top: 20%;
+    left: 0;
+}
+
+.contact-text h2{
+    margin-bottom: 40px;
+}
+
+@media (max-width: 490px){
+    .contact-section{
+        flex-direction: column;
+        padding: 60px 5%;
+    }
+
+    .contact-text{
+        width: 100%;
+        position: relative;
+    }
+}

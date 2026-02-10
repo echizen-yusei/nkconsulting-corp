@@ -1,0 +1,122 @@
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-bg-sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0; /* 背面に配置 */
+    overflow: hidden;
+}
+
+.bg{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* 基本は非表示 */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* ふわっと切り替わる設定 */
+    z-index: 0;
+    transform: scale(1.2);
+}
+
+.bg.active{
+    opacity: 1;
+    z-index: 1;
+    animation: zoomEffect 4s linear forwards;
+}
+
+@keyframes zoomEffect {
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hero-content{
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    z-index: 2;
+}
+
+.red-line{
+    width: 200px;
+    height: 4px;
+    background: #CF2E2E;
+}
+
+.hero-title p, .hero-title h1{
+    color: #f2f2f2;
+    text-shadow: #262626 2px 4px 16px;
+}
+
+.progressContainer{
+    position: absolute;
+    bottom: 64px;
+    left: 5%;
+    z-index: 4;
+    display: flex;
+    gap: 10px;
+}
+
+.progressWrap{
+    width: 64px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progressBar{
+    height: 100%;
+    background: #f2f2f2;
+    width: 100%;
+}
+
+.progressBar.animating{
+    animation: progress linear forwards;
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@media (max-width: 490px){
+    .hero-title{
+        text-align: center;
+    }
+    .hero-content{
+        padding: 0 5%;
+        width: fit-content;
+    }
+}

@@ -1,0 +1,21 @@
+.policy-content-wrap{
+    padding: 120px 0;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.policy-content h2{
+    margin-bottom: 24px;
+}
+
+.policy-content li{
+    font-size: 20px;
+}
+
+@media (max-width:490px){
+    .policy-content-wrap{
+        padding: 60px 0;
+    }
+}

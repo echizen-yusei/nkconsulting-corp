@@ -1,0 +1,41 @@
+.page-h1{
+    border-bottom: 4px solid #CF2E2E;
+    color: #262626;
+    padding-bottom: 40px;
+}
+
+.company-info-wrap{
+    display: flex;
+    width: 100%;
+    gap: 48px;
+    padding: 120px 0;
+}
+
+.company-info{
+    display: flex;
+    width: 60%;
+}
+
+.com-img{
+    width: 40%;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: #cccccc solid 1px;
+    color: #262626;
+}
+
+@media (max-width: 490px){
+    .company-info-wrap{
+        display: block;
+        padding: 60px 0;
+    }
+    .com-img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
