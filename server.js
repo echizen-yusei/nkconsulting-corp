@@ -10,7 +10,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+    "https://corp.nk-consulting.jp"
+  ],
 })
 );
 
@@ -63,8 +66,8 @@ app.post("/api/contact", async (req, res) => {
 
   // 管理者宛
   await transporter.sendMail({
-    from: `"お問い合わせフォーム" <${process.envMAIL_USER}>`,
-    to: process.env.MIAL_USER,
+    from: `"お問い合わせフォーム" <${process.env.MAIL_USER}>`,
+    to: process.env.MAIL_USER,
     replyTo: safeEmail,
     subject: "【お問い合わせ】NKCフォームからの送信",
     text: `
