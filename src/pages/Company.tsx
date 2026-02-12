@@ -26,7 +26,7 @@ const Company = () => {
           </div>
           <div className="info">
             <h3>資本金</h3>
-            <p>200万</p>
+            <p>500万</p>
           </div>
         </div>
       </div>
