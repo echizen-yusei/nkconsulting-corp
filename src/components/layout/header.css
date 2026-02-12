@@ -6,3 +6,9 @@
     width: 100%;
     align-items: center;
 }
+
+@media (max-width: 490px){
+    .header img{
+        width: 120px;
+    }
+}
