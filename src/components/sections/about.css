@@ -55,6 +55,10 @@
 }
 
 @media (max-width: 490px){
+    .about{
+        height: 100%;
+        padding: 60px 0;
+    }
     .about-copy{
         font-size: 48px;
     }
